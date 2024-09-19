@@ -1,54 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Entry Form</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Data Entry Form</h1>
-      <div class="header">
-         <label>Date: <input type="date" id="date"></label>
-            <label>Time: <input type="time" id="time"></label>
-            <label>Shift: <input type="text" id="shift" value="GOLD"></label>
-            <label>Chain: <input type="text" id="chain" value="1"></label>
-            <label>Cattle Type: <input type="text" id="cattle_type" value="Treated"></label>
-            <label>Run: <input type="number" id="run" value="2"></label>
-      </div>
-
-      <table id="data-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-             <th>Product</th>
-                    <th>Kill Floor (KF)</th>
-                    <th>Bonning Room (B/R)</th>
-                    <th>Ecchy</th>
-                    <th>Bruising</th>
-                    <th>Myositis/Dog Bite</th>
-                    <th>Butchershop</th>
-                    <th>Dark Cutter/EK</th>
-                    <th>Non-Halal</th>
-                    <th>Downgrades</th>
-                    <th>Downgrades MB2+</th>
-                    <th>Downgrades MB4+</th>
-                    <th>Other (Please Specify)</th>
-                    <th>Total</th>
-
-          </tr>
-        </thead>
-        <tbody id="table-body">
-          <!-- Rows will be added here -->
-        </tbody>
-      </table>
-
-      <button id="add-row">Add Row</button>
-      <button id="save-data">Save Data</button>
-      <button id="export-data">Export to Excel</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Entry Form</title>
+  <!-- Adjust the path to your CSS file if necessary -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Data Entry Form</h1>
+    <div class="header">
+      <label>Date: <input type="date" id="date" /></label>
+      <label>Time: <input type="time" id="time" /></label>
+      <label>Shift:
+        <select id="shift">
+          <option value="GOLD">GOLD</option>
+          <option value="GOLD NIGHT">GOLD NIGHT</option>
+          <option value="GREEN">GREEN</option>
+          <option value="GREEN NIGHT">GREEN NIGHT</option>
+        </select>
+      </label>
+      <label>Chain: <input type="text" id="chain" value="1" /></label>
+      <label>Cattle Type:
+        <select id="cattle_type">
+          <option value="Treated">Treated</option>
+          <option value="Wagyu">Wagyu</option>
+          <option value="Angus">Angus</option>
+        </select>
+      </label>
+      <label>Run: <input type="number" id="run" value="2" /></label>
     </div>
 
-    <script src="js/script.js"></script>
-  </body>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Shift</th>
+          <th>Cattle Type</th>
+          <th>Kill Floor (KF)</th>
+          <th>Bonning Room (B/R)</th>
+          <th>Ecchy</th>
+          <th>Bruising</th>
+          <th>Myositis/Dog Bite</th>
+          <th>Butchershop</th>
+          <th>Dark Cutter/EK</th>
+          <th>Non-Halal</th>
+          <th>Downgrades</th>
+          <th>Downgrades MB2+</th>
+          <th>Downgrades MB4+</th>
+          <th>Other (Please Specify)</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Rows can be dynamically added here -->
+      </tbody>
+    </table>
+
+    <button id="add-row">Add Row</button>
+    <button id="save-data">Save Data</button>
+    <button id="export-data">Export to Excel</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
