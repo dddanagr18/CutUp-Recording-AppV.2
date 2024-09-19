@@ -154,3 +154,4 @@ document.getElementById("export-data").addEventListener("click", function () {
   link.click()
   document.body.removeChild(link)
 })
+console.log('Script loaded');
